@@ -1,4 +1,7 @@
 {
+  "devDependencies": {
+    "@fitbit/sdk": "~4.3.0"
+  },
   "fitbit": {
     "appUUID": "7ea54b39-cd6b-44e1-a0db-832ddcd5eae3",
     "appType": "clockface",
@@ -11,16 +14,14 @@
     ],
     "buildTargets": [
       "meson",
-      "gemini"
+      "gemini",
+      "mira"
     ],
     "i18n": {
-      "en": {
+      "en-US": {
         "name": "SpecTrackular"
       }
     },
     "defaultLanguage": "en-US"
-  },
-  "devDependencies": {
-    "@fitbit/sdk": "~3.1.0"
   }
 }
