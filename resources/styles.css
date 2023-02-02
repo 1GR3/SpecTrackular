@@ -1,0 +1,45 @@
+.defaultText {
+  font-size: 26;
+  font-family: System-Regular;
+  font-weight: regular;
+  text-length: 26;
+}
+
+
+#root {
+  width: 100%;
+  height: 100%;
+  viewport-fill: "#000000";
+}
+#flash {
+  fill: white;
+  opacity: 0;
+}
+.oval circle {
+  fill-opacity: .75;
+} 
+#activityWheel {
+  transform: rotate(-90);
+  
+}
+#colorWheel {
+  transform: rotate(-90);
+}
+
+
+.sensor {
+  font-size: 22;
+  fill: #AAAAAA;
+  text-length: 5;
+}
+#logo {
+  font-family: Colfax-Black;
+  font-size: 40;
+  fill: #AAAAAA;
+}
+#date {
+  fill: #AAAAAA;
+  font-family: Colfax-Black;
+  font-size: 26;
+  text-length: 10;
+}

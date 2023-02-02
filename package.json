@@ -1,0 +1,26 @@
+{
+  "fitbit": {
+    "appUUID": "7ea54b39-cd6b-44e1-a0db-832ddcd5eae3",
+    "appType": "clockface",
+    "appDisplayName": "SpecTrackular",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#607d8b",
+    "requestedPermissions": [
+      "access_activity",
+      "access_heart_rate"
+    ],
+    "buildTargets": [
+      "meson",
+      "gemini"
+    ],
+    "i18n": {
+      "en": {
+        "name": "SpecTrackular"
+      }
+    },
+    "defaultLanguage": "en-US"
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~3.1.0"
+  }
+}
