@@ -244,6 +244,7 @@ goals.addEventListener("reachgoal", (goal, evt) => {
 
 // flaslight on double click
 const flash = document.getElementById("flash");
+const flashBtn = document.getElementById("flashBtn");
 var  flashlightToggle = function() {
   if (flash.style.opacity == 0) {
     flash.style.opacity = 1;
@@ -262,7 +263,7 @@ var  flashlightoff = function() {
 var clickCount = 0;
 var timeout;
 
-flash.onclick = function() { 
+flashBtn.onclick = function() { 
   clickCount++;
   if(timeout){
     clearTimeout(timeout);
