@@ -111,22 +111,10 @@
   </g>
   
   <g id="mins" pointer-events="visible" transform="translate(50%,50%)">
-    <rect x="$-2" y="-110" width="4" height="90"  fill="#FFFFFF">
-<!--       <animate attributeName="height" begin="enable" from="0" to="90" dur=".3" easing="ease-out"/>
-      <animate attributeName="y" begin="enable" from="0" to="-110" dur=".3" easing="ease-out"/>
-      <animate attributeName="height" begin="disable" from="90" to="0" dur="0"/>
-      <animate attributeName="y" begin="disable" from="-110" to="0" dur="0"/> -->
-    </rect>
-<!--     <text id="minTxt" y="-110" text-anchor="middle"/> -->
+    <rect x="$-2" y="-110" width="4" height="90"  fill="#FFFFFF"></rect>
   </g>
   <g id="hours" pointer-events="visible" transform="translate(50%,50%)">
-    <rect x="$-4" y="-75" width="8" height="75"  fill="#FFFFFF">
-<!--       <animate attributeName="height" begin="enable+.1" from="0" to="75" dur=".3" easing="ease-out"/>
-      <animate attributeName="y" begin="enable+.1" from="0" to="-75" dur=".3" easing="ease-out"/>
-      <animate attributeName="height" begin="disable" from="75" to="0" dur="0"/>
-      <animate attributeName="y" begin="disable" from="-75" to="0" dur="0"/> -->
-    </rect>
-<!--     <text id="hourTxt"  y="-75" text-anchor="middle"/> -->
+    <rect x="$-4" y="-75" width="8" height="75"  fill="#FFFFFF"></rect>
   </g>
   <g id="secs" pointer-events="visible" transform="translate(50%,50%)">
    <!--<rect x="$-1" y="-140" width="2" height="140" />-->
@@ -141,7 +129,7 @@
   
   <text id="btr" class="sensor" x="8" y="26" ></text>
   
-  <image href="img/active.png" width="11" height="18" x="282" y="9"/>
+  <image href="img/azm.jpg" width="14" height="18" x="282" y="9"/>
   <text id="act" class="sensor" x="280" y="26" text-anchor="end"></text>
   
   <image href="img/heart.png" width="20" height="16" x="8" y="276"/>
