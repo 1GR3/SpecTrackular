@@ -5,6 +5,16 @@
   text-length: 26;
 }
 
+#bigText {
+  font-size: 86;
+  font-family: System-Regular;
+  font-weight: regular;
+  fill: #FFFFFF;
+  text-align: center;
+  text-anchor: middle;
+  text-length: 26;
+}
+
 
 #root {
   width: 100%;
