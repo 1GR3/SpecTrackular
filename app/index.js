@@ -5,8 +5,7 @@ import * as util from "../common/utils";
 import { display } from "display";
 import { HeartRateSensor } from "heart-rate";
 import { me as appbit } from "appbit";
-import {userActivity, today} from "user-activity";
-import { today, goals } from "user-activity";
+import {userActivity, today, goals} from "user-activity";
 import { battery } from "power";
 
 //grab the elements from the display
@@ -75,10 +74,10 @@ function secondsToAngle(seconds) {
 
 // Rotate the hands every tick
 function updateClock() {
-  var today = new Date();
-  var hours = today.getHours() % 12;
-  var mins = today.getMinutes();
-  var secs = today.getSeconds();
+  var Today = new Date();
+  var hours = Today.getHours() % 12;
+  var mins = Today.getMinutes();
+  var secs = Today.getSeconds();
   
   hourHand.groupTransform.rotate.angle = hoursToAngle(hours, mins);
   minHand.groupTransform.rotate.angle = minutesToAngle(mins);
@@ -89,17 +88,18 @@ function updateClock() {
   //hourText.text = hours;
   //minText.text = mins;
   //secText.text = secs;
-  if ( mins==0 || mins==12 || mins==24 || mins==36 || mins==48 ) {
-    logActivity();
-  }
+  // if ( mins==0 || mins==12 || mins==24 || mins==36 || mins==48 ) {
+  //   logActivity();
+  // }
   //logActivity();
   
   const days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
-  dateLabel.text = days[today.getDay()] + " " + today.getDate();
+  dateLabel.text = days[Today.getDay()] + " " + Today.getDate();
   
   // acLabel.text = (userActivity.today.adjusted["activeMinutes"] || 0);
   acLabel.text = (today.adjusted.activeZoneMinutes.total || 0);
-  stLabel.text = (userActivity.today.adjusted["steps"] || 0);
+  // stLabel.text = (userActivity.today.adjusted["steps"] || 0);
+  stLabel.text = (today.adjusted.steps || 0);
   if ( battery.chargeLevel >= 17) {
     btLabel.text = Math.floor(battery.chargeLevel) + "%";
     btLabel.style.opacity = 1;
@@ -155,7 +155,7 @@ function wake() {
 }
 
 function sleep() {
-  flashlightoff();
+  flashlightOff();
   minHand.animate("disable");
   hourHand.animate("disable");
   secHand.animate("disable");
@@ -177,17 +177,22 @@ const flash = document.getElementById("flash");
 const flashBtn = document.getElementById("flashBtn");
 var  flashlightToggle = function() {
   if (flash.style.opacity == 0) {
-    flash.style.opacity = 1;
-    display.autoOff = false;
-    display.brightnessOverride = 1.0;
+    flashlightOn();
   } else {
-    flashlightoff();
+    flashlightOff();
   }
 };
-var  flashlightoff = function() {
+var  flashlightOn = function() {
+  flash.style.opacity = 1;
+  display.autoOff = false;
+  //display.brightnessOverride = 1.0;
+  display.brightnessOverride = "max";
+};
+var  flashlightOff = function() {
   flash.style.opacity = 0;
   display.autoOff = true;
   display.brightnessOverride = undefined;
+  //display.brightnessOverride = "normal";
 };
 
 var clickCount = 0;
@@ -245,7 +250,7 @@ heartBtn.onmouseup = function() {
 }
 
 stepsBtn.onmousedown = function() {
-  bigText.text = stLabel.text = (userActivity.today.adjusted["steps"] || 0);
+  bigText.text = stLabel.text = (today.adjusted.steps || 0);
   bigDisplay.style.opacity=1;
 }
 stepsBtn.onmouseup = function() {
@@ -253,8 +258,8 @@ stepsBtn.onmouseup = function() {
 }
 
 timeBtn.onmousedown = function() {
-  var today = new Date();
-  bigText.text = stLabel.text = today.getHours() + ":" + today.getMinutes();
+  var Today = new Date();
+  bigText.text = stLabel.text = Today.getHours() + ":" + Today.getMinutes();
   bigDisplay.style.opacity=1;
 }
 timeBtn.onmouseup = function() {
