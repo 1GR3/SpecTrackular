@@ -1,13 +1,16 @@
 {
+  "name": "specTrackular",
+  "version": "0.1.0",
   "devDependencies": {
-    "@fitbit/sdk": "~4.3.0"
+    "@fitbit/sdk": "~4.3.0",
+    "@fitbit/sdk-cli": "^1.7.3"
   },
   "fitbit": {
     "appUUID": "7ea54b39-cd6b-44e1-a0db-832ddcd5eae3",
     "appType": "clockface",
     "appDisplayName": "SpecTrackular",
     "iconFile": "resources/icon.png",
-    "wipeColor": "#607d8b",
+    "wipeColor": "#000000",
     "requestedPermissions": [
       "access_activity",
       "access_heart_rate"
@@ -17,11 +20,11 @@
       "gemini",
       "mira"
     ],
-    "i18n": {
-      "en-US": {
-        "name": "SpecTrackular"
-      }
-    },
+    "i18n": {},
     "defaultLanguage": "en-US"
+  },
+  "scripts": {
+    "build": "fitbit-build",
+    "debug": "fitbit"
   }
 }
