@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fonts>
+    <font id="BionicBoldNumber" filename="fonts/BionicBoldNumber.fnt" antialias="true" filter="0123456789%-"/>
+</fonts>

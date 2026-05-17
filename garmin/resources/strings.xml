@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+  <string id="AppName">SpecTrackular</string>
+  <string id="BatteryLabel">BAT</string>
+  <string id="DateFormat">%a %d</string>
+  <string id="HeartLabel">HR</string>
+  <string id="StepsLabel">STEPS</string>
+  <string id="ActivityLabel">ACT</string>
+</strings>

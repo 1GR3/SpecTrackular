@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drawables>
+    <bitmap id="LauncherIcon" filename="launcher_icon.png"/>
+    <bitmap id="ActiveIcon" filename="img/active.png"/>
+    <bitmap id="AzmIcon" filename="img/azm.png"/>
+    <bitmap id="HeartIcon" filename="img/heart.png"/>
+    <bitmap id="StepIcon" filename="img/step.png"/>
+    <bitmap id="BatteryFrame0" filename="battery_frames/battery_0.png"/>
+    <bitmap id="BatteryFrame1" filename="battery_frames/battery_1.png"/>
+    <bitmap id="BatteryFrame2" filename="battery_frames/battery_2.png"/>
+    <bitmap id="BatteryFrame3" filename="battery_frames/battery_3.png"/>
+    <bitmap id="BodyBatteryIcon" filename="body-battery.png"/>
+    <bitmap id="HeartRateIcon" filename="Heart-rate.png"/>
+    <bitmap id="StepsIcon" filename="steps.png"/>
+    <bitmap id="Rosette" filename="img/rosette.png"/>
+</drawables>
